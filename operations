@@ -15,3 +15,16 @@ student_name varchar(30),
 student_mobile int ,
 student_course_enroll varchar(30),
 student_course_id int )
+
+
+insert into course values(101 , 'fsda' , 'full stack data analytics' , 'Analytics'),
+(102 , 'fsds' , 'full stack data analytics' , 'Analytics'),
+(103 , 'fsds' , 'full stack data science' , 'DS'),
+(104 , 'big data' , 'full stack big data' , 'BD'),
+(105 , 'mern' , 'web dev' , 'mern'),
+(106 , 'blockchain' , 'full stack blockchain' , 'BC'),
+(101 , 'java' , 'full stack java' , 'java'),
+(102 , 'testing' , 'full testing ' , 'testing '),
+(105 , 'cybersecurity' , 'full stack cybersecurity' , 'cybersecurity'),
+(109 , 'c' , 'c language' , 'c'),
+(108 , 'c++' , 'C++ language' , 'language')
