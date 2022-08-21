@@ -124,3 +124,13 @@ course_tag varchar(50),
 unique index(course_desc,course_name)
 )
 show index from course5
+
+
+select course_id , course_name from course 
+union 
+select student_id , student_name from student 
+
+
+(select course_desc , course_name from course 
+union 
+select student_id , student_name from student )
