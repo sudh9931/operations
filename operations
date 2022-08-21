@@ -134,3 +134,16 @@ select student_id , student_name from student
 (select course_desc , course_name from course 
 union 
 select student_id , student_name from student )
+
+
+
+with sample_students as (
+select * from course where course_id in (101,102,106))
+select * from sample_students where course_tag = 'java' 
+
+
+
+with outcoume_corss as (select c.course_id , c.course_name , c.course_desc ,s.student_id,s.student_name ,s.student_course_id from course c
+cross  join student s ) select course_id , course_name ,student_id from outcoume_corss where student_id = 301
+
+
