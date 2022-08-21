@@ -54,5 +54,73 @@ select c.course_id , c.course_name , c.course_desc ,s.student_id,s.student_name 
 cross  join student s 
 
 
+show index from course1
+
+create table if not exists course1 (
+course_id int ,
+course_name varchar(50),
+course_desc varchar(60),
+course_tag varchar(50),
+index(course_id)
+)
+
+insert into course1 values(101 , 'fsda' , 'full stack data analytics' , 'Analytics'),
+(102 , 'fsds' , 'full stack data analytics' , 'Analytics'),
+(103 , 'fsds' , 'full stack data science' , 'DS'),
+(104 , 'big data' , 'full stack big data' , 'BD'),
+(105 , 'mern' , 'web dev' , 'mern'),
+(106 , 'blockchain' , 'full stack blockchain' , 'BC'),
+(101 , 'java' , 'full stack java' , 'java'),
+(102 , 'testing' , 'full testing ' , 'testing '),
+(105 , 'cybersecurity' , 'full stack cybersecurity' , 'cybersecurity'),
+(109 , 'c' , 'c language' , 'c'),
+(108 , 'c++' , 'C++ language' , 'language')
 
 
+create table if not exists course2 (
+course_id int ,
+course_name varchar(50),
+course_desc varchar(60),
+course_tag varchar(50),
+index(course_id,course_name)
+)
+
+create table if not exists course4 (
+course_id int ,
+course_name varchar(50),
+course_desc varchar(60),
+course_tag varchar(50),
+index(course_desc,course_name,course_tag)
+)
+
+
+
+insert into course4 values(101 , 'fsda' , 'full stack data analytics' , 'Analytics'),
+(102 , 'fsds' , 'full stack data analytics' , 'Analytics'),
+(103 , 'fsds' , 'full stack data science' , 'DS'),
+(104 , 'big data' , 'full stack big data' , 'BD'),
+(105 , 'mern' , 'web dev' , 'mern'),
+(106 , 'blockchain' , 'full stack blockchain' , 'BC'),
+(101 , 'java' , 'full stack java' , 'java'),
+(102 , 'testing' , 'full testing ' , 'testing '),
+(105 , 'cybersecurity' , 'full stack cybersecurity' , 'cybersecurity'),
+(109 , 'c' , 'c language' , 'c'),
+(108 , 'c++' , 'C++ language' , 'language')
+show index from course4
+
+EXPLAIN ANALYZE select * from course4 where  course_id = 106 or course_name = 'fsds'
+
+explain select * from course4 where  course_id = 106
+
+analyze table course4
+
+describe course4
+
+create table if not exists course6 (
+course_id int ,
+course_name varchar(50),
+course_desc varchar(60),
+course_tag varchar(50),
+unique index(course_desc,course_name)
+)
+show index from course5
