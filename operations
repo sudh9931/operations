@@ -28,3 +28,15 @@ insert into course values(101 , 'fsda' , 'full stack data analytics' , 'Analytic
 (105 , 'cybersecurity' , 'full stack cybersecurity' , 'cybersecurity'),
 (109 , 'c' , 'c language' , 'c'),
 (108 , 'c++' , 'C++ language' , 'language')
+
+
+
+insert into student values(301 , "sudhanshu", 3543453,'yes', 101),
+(302 , "sudhanshu", 3543453,'yes', 102),
+(301 , "sudhanshu", 3543453,'yes', 105),
+(302 , "sudhanshu", 3543453,'yes', 106),
+(303 , "sudhanshu", 3543453,'yes', 101),
+(304 , "sudhanshu", 3543453,'yes', 103),
+(305 , "sudhanshu", 3543453,'yes', 105),
+(306 , "sudhanshu", 3543453,'yes', 107),
+(306 , "sudhanshu", 3543453,'yes', 103)
