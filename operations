@@ -40,3 +40,10 @@ insert into student values(301 , "sudhanshu", 3543453,'yes', 101),
 (305 , "sudhanshu", 3543453,'yes', 105),
 (306 , "sudhanshu", 3543453,'yes', 107),
 (306 , "sudhanshu", 3543453,'yes', 103)
+
+
+select c.course_id , c.course_name , c.course_desc ,s.student_id,s.student_name ,s.student_course_id from course c
+inner join student s on c.course_id = s.student_course_id
+
+select c.course_id , c.course_name , c.course_desc ,s.student_id,s.student_name ,s.student_course_id from course c
+left join student s on c.course_id = s.student_course_id
