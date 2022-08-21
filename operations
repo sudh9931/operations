@@ -1,7 +1,6 @@
 create database operation
 use operation
 
-
 create table if not exists course (
 course_id int ,
 course_name varchar(50),
@@ -16,7 +15,6 @@ student_mobile int ,
 student_course_enroll varchar(30),
 student_course_id int )
 
-
 insert into course values(101 , 'fsda' , 'full stack data analytics' , 'Analytics'),
 (102 , 'fsds' , 'full stack data analytics' , 'Analytics'),
 (103 , 'fsds' , 'full stack data science' , 'DS'),
@@ -29,8 +27,6 @@ insert into course values(101 , 'fsda' , 'full stack data analytics' , 'Analytic
 (109 , 'c' , 'c language' , 'c'),
 (108 , 'c++' , 'C++ language' , 'language')
 
-
-
 insert into student values(301 , "sudhanshu", 3543453,'yes', 101),
 (302 , "sudhanshu", 3543453,'yes', 102),
 (301 , "sudhanshu", 3543453,'yes', 105),
@@ -41,9 +37,22 @@ insert into student values(301 , "sudhanshu", 3543453,'yes', 101),
 (306 , "sudhanshu", 3543453,'yes', 107),
 (306 , "sudhanshu", 3543453,'yes', 103)
 
+select * from course
+
+select * from student
 
 select c.course_id , c.course_name , c.course_desc ,s.student_id,s.student_name ,s.student_course_id from course c
 inner join student s on c.course_id = s.student_course_id
 
 select c.course_id , c.course_name , c.course_desc ,s.student_id,s.student_name ,s.student_course_id from course c
-left join student s on c.course_id = s.student_course_id
+left join student s on c.course_id = s.student_course_id where s.student_id is null;
+
+select c.course_id , c.course_name , c.course_desc ,s.student_id,s.student_name ,s.student_course_id from course c
+right join student s on c.course_id = s.student_course_id where c.course_id is null
+
+select c.course_id , c.course_name , c.course_desc ,s.student_id,s.student_name ,s.student_course_id from course c
+cross  join student s 
+
+
+
+
